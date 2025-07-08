@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POGIL: Toxicidade dos Metais Pesados no Desastre de Brumadinho</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Atividade POGIL: Toxicidade dos Metais Pesados no Desastre de Brumadinho</h1>
+            <p class="subtitle">Process-Oriented Guided Inquiry Learning - 3º Ano do Ensino Médio</p>
+        </header>
+
+        <section class="group-info">
+            <h2>Informações do Grupo</h2>
+            <div class="group-members">
+                <h3>Nome dos Integrantes do Grupo:</h3>
+                <div class="member-inputs">
+                    <input type="text" placeholder="1. Nome do integrante" id="member1">
+                    <input type="text" placeholder="2. Nome do integrante" id="member2">
+                    <input type="text" placeholder="3. Nome do integrante" id="member3">
+                    <input type="text" placeholder="4. Nome do integrante" id="member4">
+                    <input type="text" placeholder="5. Nome do integrante" id="member5">
+                </div>
+            </div>
+            
+            <div class="roles">
+                <h3>Papéis no Grupo:</h3>
+                <div class="role-assignments">
+                    <div class="role">
+                        <strong>Gerente:</strong> 
+                        <select id="manager">
+                            <option value="">Selecione...</option>
+                            <option value="member1">Integrante 1</option>
+                            <option value="member2">Integrante 2</option>
+                            <option value="member3">Integrante 3</option>
+                            <option value="member4">Integrante 4</option>
+                            <option value="member5">Integrante 5</option>
+                        </select>
+                        <span class="role-description">Garante que o grupo permaneça na tarefa e que todos participem.</span>
+                    </div>
+                    <div class="role">
+                        <strong>Relator:</strong> 
+                        <select id="reporter">
+                            <option value="">Selecione...</option>
+                            <option value="member1">Integrante 1</option>
+                            <option value="member2">Integrante 2</option>
+                            <option value="member3">Integrante 3</option>
+                            <option value="member4">Integrante 4</option>
+                            <option value="member5">Integrante 5</option>
+                        </select>
+                        <span class="role-description">Anota as respostas do grupo e garante que a folha seja preenchida corretamente.</span>
+                    </div>
+                    <div class="role">
+                        <strong>Apresentador:</strong> 
+                        <select id="presenter">
+                            <option value="">Selecione...</option>
+                            <option value="member1">Integrante 1</option>
+                            <option value="member2">Integrante 2</option>
+                            <option value="member3">Integrante 3</option>
+                            <option value="member4">Integrante 4</option>
+                            <option value="member5">Integrante 5</option>
+                        </select>
+                        <span class="role-description">Apresenta as conclusões do grupo para a turma.</span>
+                    </div>
+                    <div class="role">
+                        <strong>Cronometrista:</strong> 
+                        <select id="timekeeper">
+                            <option value="">Selecione...</option>
+                            <option value="member1">Integrante 1</option>
+                            <option value="member2">Integrante 2</option>
+                            <option value="member3">Integrante 3</option>
+                            <option value="member4">Integrante 4</option>
+                            <option value="member5">Integrante 5</option>
+                        </select>
+                        <span class="role-description">Garante que o grupo gerencie o tempo de forma eficaz.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="introduction">
+            <h2>Introdução: O Desastre de Brumadinho e a Contaminação por Metais Pesados</h2>
+            <p>Em 25 de janeiro de 2019, a barragem de rejeitos da Mina Córrego do Feijão, em Brumadinho (MG), rompeu-se, liberando uma avalanche de lama e resíduos de mineração. Essa tragédia causou a morte de 270 pessoas e devastou o meio ambiente local, atingindo o Rio Paraopeba e suas comunidades ribeirinhas.</p>
+            
+            <p>Os rejeitos de mineração são compostos por uma mistura de água, argila e diversos minerais, incluindo metais pesados, que podem ser tóxicos para seres vivos. A exposição a esses metais, seja por contato direto, inalação de poeira ou consumo de água e alimentos contaminados, representa um sério risco à saúde humana e ao equilíbrio dos ecossistemas.</p>
+            
+            <p><strong>Nesta atividade, vocês irão investigar os impactos da contaminação por metais pesados na saúde de crianças expostas ao desastre de Brumadinho, analisando dados reais e desenvolvendo habilidades de interpretação e argumentação em saúde ambiental.</strong></p>
+        </section>
+
+        <section class="model">
+            <h2>Modelo 1: Concentração de Metais Pesados em Crianças de Brumadinho e Limites da ANVISA</h2>
+            <p>A tabela abaixo apresenta a concentração média de alguns metais pesados encontrados em exames de crianças que vivem em áreas afetadas pelo desastre de Brumadinho, comparados com os Limites Máximos estabelecidos pela ANVISA (Agência Nacional de Vigilância Sanitária) para a saúde humana. Esses limites indicam a concentração máxima de uma substância que pode ser considerada segura para a saúde.</p>
+            
+            <div class="table-container">
+                <table id="metals-table">
+                    <thead>
+                        <tr>
+                            <th>Metal</th>
+                            <th>Concentração média em exames de crianças (µg/L)</th>
+                            <th>Limite Máximo ANVISA (µg/L)</th>
+                            <th>% Excedido (a calcular)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Arsênio</strong></td>
+                            <td>25</td>
+                            <td>10</td>
+                            <td><input type="number" id="arsenic-excess" placeholder="Calcule aqui" step="0.01"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Chumbo</strong></td>
+                            <td>12</td>
+                            <td>5</td>
+                            <td><input type="number" id="lead-excess" placeholder="Calcule aqui" step="0.01"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cádmio</strong></td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td><input type="number" id="cadmium-excess" placeholder="Calcule aqui" step="0.01"></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mercúrio</strong></td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><input type="number" id="mercury-excess" placeholder="Calcule aqui" step="0.01"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="calculation-helper">
+                <h3>Fórmula para Cálculo:</h3>
+                <p><strong>% Excedido = ((Concentração Média - Limite Máximo) / Limite Máximo) × 100</strong></p>
+                <button id="calculate-btn" onclick="calculateExcess()">Calcular Automaticamente</button>
+                <button id="clear-btn" onclick="clearCalculations()">Limpar Cálculos</button>
+            </div>
+        </section>
+
+        <section class="questions">
+            <h2>Perguntas Guiadas</h2>
+            
+            <div class="phase">
+                <h3>Fase de Exploração (10 minutos)</h3>
+                <div class="question">
+                    <label for="q1"><strong>1.</strong> De acordo com a <strong>Introdução</strong>, qual foi o evento que causou a liberação de rejeitos em Brumadinho? Quais são os principais componentes desses rejeitos que nos preocupam?</label>
+                    <textarea id="q1" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q2"><strong>2.</strong> Observe o <strong>Modelo 1</strong>. Quais metais pesados estão sendo analisados nesta tabela?</label>
+                    <textarea id="q2" rows="2"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q3"><strong>3.</strong> Para cada metal listado, compare a "Concentração média em exames de crianças" com o "Limite Máximo ANVISA". O que você observa em relação a esses valores? Há algum metal em que a concentração nas crianças está acima do limite?</label>
+                    <textarea id="q3" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Fase de Construção de Conceitos (15 minutos)</h3>
+                <div class="question">
+                    <label for="q4"><strong>4.</strong> Com base na sua observação da tabela, o que você acha que o "Limite Máximo ANVISA" representa? Por que é importante que órgãos como a ANVISA estabeleçam esses limites? (Pense na ideia de uma <strong>dose de referência</strong>).</label>
+                    <textarea id="q4" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q5"><strong>5.</strong> Como você definiria, com suas próprias palavras, o termo <strong>"dose de referência"</strong> no contexto da saúde ambiental?</label>
+                    <textarea id="q5" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q6"><strong>6.</strong> Considerando que a exposição aos rejeitos em Brumadinho pode ter ocorrido por um longo período (meses ou anos), que tipo de problemas de saúde você esperaria que surgissem nas pessoas expostas? Seriam problemas que aparecem imediatamente (agudos) ou que se desenvolvem ao longo do tempo (crônicos)?</label>
+                    <textarea id="q6" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q7"><strong>7.</strong> Com base na sua resposta anterior, como você definiria o termo <strong>"risco crônico"</strong> em relação à exposição a substâncias tóxicas como os metais pesados?</label>
+                    <textarea id="q7" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Fase de Aplicação (10 minutos)</h3>
+                <div class="question">
+                    <label for="q8"><strong>8.</strong> Agora, vamos quantificar o quanto as concentrações de metais pesados nas crianças excederam os limites da ANVISA. Calcule o "% Excedido" para cada metal e preencha a tabela acima. Mostre seus cálculos aqui:</label>
+                    <textarea id="q8" rows="6" placeholder="Arsênio:&#10;Chumbo:&#10;Cádmio:&#10;Mercúrio:"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q9"><strong>9.</strong> Qual metal apresentou o maior percentual de excesso em relação ao limite da ANVISA? O que esse alto percentual sugere sobre o risco para a saúde das crianças em relação a esse metal específico?</label>
+                    <textarea id="q9" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q10"><strong>10.</strong> O mercúrio tem a menor "Concentração média em exames de crianças" entre os metais listados (2 µg/L). No entanto, ao calcular o "% Excedido", o que você percebe? Por que, mesmo com uma concentração aparentemente baixa, ele ainda representa um risco significativo?</label>
+                    <textarea id="q10" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q11"><strong>11.</strong> Com base em todos os dados e cálculos que vocês realizaram, argumentem em grupo por que a situação em Brumadinho representa um grave problema de saúde ambiental, especialmente para as crianças.</label>
+                    <textarea id="q11" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="phase">
+                <h3>Fase de Conclusão (10-15 minutos)</h3>
+                <div class="question">
+                    <label for="q12"><strong>12.</strong> Em seu grupo, elaborem uma síntese (2-3 frases) que resuma as principais conclusões da análise da tabela e dos cálculos realizados.</label>
+                    <textarea id="q12" rows="3"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q13"><strong>13.</strong> Com base nos riscos à saúde identificados, que recomendações de saúde pública vocês fariam para as comunidades afetadas por metais pesados em Brumadinho? (Pensem em ações de prevenção, monitoramento da saúde, tratamento e educação).</label>
+                    <textarea id="q13" rows="4"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q14"><strong>14.</strong> Além das ações de saúde, que medidas de remediação ambiental (limpeza, recuperação do solo e da água) poderiam ser tomadas para reduzir a exposição da população aos metais pesados a longo prazo?</label>
+                    <textarea id="q14" rows="4"></textarea>
+                </div>
+                
+                <div class="question">
+                    <label for="q15"><strong>15.</strong> Reflitam: Como a ciência e a tecnologia podem ser usadas para prevenir futuros desastres como o de Brumadinho e para mitigar seus impactos? O que a sociedade, incluindo vocês, pode fazer para exigir mais segurança e responsabilidade ambiental?</label>
+                    <textarea id="q15" rows="4"></textarea>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button id="save-btn" onclick="saveAnswers()">Salvar Respostas</button>
+            <button id="print-btn" onclick="window.print()">Imprimir Atividade</button>
+            <button id="export-btn" onclick="exportAnswers()">Exportar Respostas</button>
+        </section>
+
+        <footer>
+            <p>Atividade POGIL desenvolvida para o ensino de Ciências - Tema: Desastre de Brumadinho e Metais Pesados</p>
+            <p>Metodologia: Process-Oriented Guided Inquiry Learning (POGIL)</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
